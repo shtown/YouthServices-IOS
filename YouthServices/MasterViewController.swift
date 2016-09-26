@@ -37,6 +37,12 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if let split = self.splitViewController {
+            let controllers = split.viewControllers
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            
+        }
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90
         
@@ -77,13 +83,8 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         searchController.searchBar.delegate = self
         
         
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
-        
-        
-        
+
+
     }
 
     override func viewWillAppear(_ animated: Bool) {

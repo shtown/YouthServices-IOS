@@ -10,8 +10,6 @@ import UIKit
 import GoogleMaps
 
 class DetailViewController: UIViewController, GMSMapViewDelegate{
-    
-
 
     var london: GMSMarker?
     var londonView: UIImageView?
@@ -52,14 +50,14 @@ class DetailViewController: UIViewController, GMSMapViewDelegate{
             if let label = self.detailDescriptionLabel {
                 label.text = detail.description
             }
+
         }
     }
  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+/*
         let info = facility.Address! + "\n" + "Fee: " + facility.Fee! + "\n" + facility.Telephone! + "\n\n"  + facility.Desc!
         
         mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
@@ -91,6 +89,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate{
         marker.title = facility.F_Name!
         marker.snippet = info
         marker.map = mapView
+ */
         
     }
     
