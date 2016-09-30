@@ -9,10 +9,8 @@
 import UIKit
 import GoogleMaps
 
-class DetailViewController: UIViewController, GMSMapViewDelegate{
+class DetailViewController: UIViewController, GMSMapViewDelegate {
 
-    var london: GMSMarker?
-    var londonView: UIImageView?
     
     @IBOutlet var mapView: GMSMapView!
     @IBOutlet var nameField: UILabel!
@@ -22,9 +20,10 @@ class DetailViewController: UIViewController, GMSMapViewDelegate{
     @IBOutlet var websiteField: UILabel!
     @IBOutlet var feeField: UILabel!
     
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-    
+    var locationManager = CLLocationManager()
+    var currLocation: CLLocation?
     let regionRadius: CLLocationDistance = 1000
+    
     var lat: Double?
     var lon: Double?
     
@@ -33,66 +32,71 @@ class DetailViewController: UIViewController, GMSMapViewDelegate{
             navigationItem.title = facility.F_Name
             self.lat = Double(facility.Lat!)
             self.lon = Double(facility.Lon!)
-            
-        }
-    }
-    
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
+
             self.configureView()
         }
     }
+
     
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
+
+        if let facility = self.facility  {
+            
+            let info = facility.Address! + "\n" + "Fee: " + facility.Fee! + "\n" + facility.Telephone! + "\n\n"  + facility.Desc!
+
+            let camera = GMSCameraPosition.camera(withLatitude: self.lat!, longitude: self.lon!, zoom: 15.0)
+            
+            mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+//            mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width - 100, height: self.view.bounds.height))
+            mapView?.mapType = kGMSTypeNormal
+            mapView?.isMyLocationEnabled = true
+
+            self.view = mapView
+ 
+            
+            //Add a segmented control for selecting the map type.
+            let items = ["Normal", "Terrain", "Satellite", "Hybrid"]
+            let segmentedControl = UISegmentedControl(items: items)
+            segmentedControl.selectedSegmentIndex = 0
+            
+            segmentedControl.frame = CGRect(x: 10, y: 65, width: view.bounds.width, height: 50)
+            segmentedControl.layer.cornerRadius = 5.0
+            segmentedControl.addTarget(self, action: #selector(DetailViewController.mapType(_:)), for: UIControlEvents.valueChanged)
+            segmentedControl.addTarget(self, action: #selector(DetailViewController.segColor(_:)), for: UIControlEvents.valueChanged)
+//                   self.view.addSubview(segmentedControl)
+            let marker = GMSMarker()
+            
+            marker.position = CLLocationCoordinate2D(latitude: self.lat!, longitude: self.lon!)
+            marker.title = facility.F_Name!
+            marker.snippet = info
+            marker.map = mapView
 
         }
     }
- 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-/*
-        let info = facility.Address! + "\n" + "Fee: " + facility.Fee! + "\n" + facility.Telephone! + "\n\n"  + facility.Desc!
-        
-        mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
-        
-        mapView.camera = GMSCameraPosition.camera(withLatitude: self.lat!, longitude: self.lon!, zoom: 15.0)
-        
-        mapView.mapType = kGMSTypeNormal
-        mapView.isMyLocationEnabled = true
-        mapView.delegate = self
-        
-        view.addSubview(mapView)
-        
-        //Add a segmented control for selecting the map type.
-        let items = ["Normal", "Terrain", "Satellite", "Hybrid"]
-        let segmentedControl = UISegmentedControl(items: items)
-        segmentedControl.selectedSegmentIndex = 0
-        
-        segmentedControl.frame = CGRect(x: 0, y: 65, width: view.bounds.width, height: 50)
-        segmentedControl.layer.cornerRadius = 5.0
-        segmentedControl.addTarget(self, action: #selector(DetailViewController.mapType(_:)), for: UIControlEvents.valueChanged)
-        segmentedControl.addTarget(self, action: #selector(DetailViewController.segColor(_:)), for: UIControlEvents.valueChanged)
-        view.addSubview(segmentedControl)
-        
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        
-        marker.position = CLLocationCoordinate2D(latitude: self.lat!, longitude: self.lon!)
-        marker.title = facility.F_Name!
-        marker.snippet = info
-        marker.map = mapView
- */
-        
+
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // GPS
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        let marker = GMSMarker()
+        mapView.isMyLocationEnabled = true
+        mapView.camera = GMSCameraPosition(target: (location?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
+        marker.position = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        marker.title = "Current Location"
+        marker.map = mapView
+        
+        self.locationManager.stopUpdatingLocation()
+    }
     
     func mapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -152,6 +156,33 @@ class DetailViewController: UIViewController, GMSMapViewDelegate{
         actionSheet.addAction(cancelAction)
         
         present(actionSheet, animated: true, completion: nil)
+    }
+}
+
+
+// MARK: - CLLocationManagerDelegate
+
+extension DetailViewController: CLLocationManagerDelegate {
+    
+
+      @nonobjc func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+
+        if status == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+
+            mapView.isMyLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+    }
+
+      @nonobjc func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+
+            locationManager.stopUpdatingLocation()
+        }
+        
     }
 }
 

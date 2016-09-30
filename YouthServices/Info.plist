@@ -37,7 +37,7 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
-			<key>responsehotline.org</key>
+			<key>arcgisonline.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -46,7 +46,7 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
-			<key>arcgisonline.com</key>
+			<key>responsehotline.org</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -67,7 +67,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Youth Services requires acces to your device&apos;s location in order 	to determine distance to facilites from your current location</string>
+	<string>Youth Services requires acces to your device's location in order 	to determine distance to facilites from your current location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

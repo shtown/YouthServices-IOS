@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import DropDown
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -25,27 +27,58 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     var facilityStore: FacilityStore!
     var facilities = [Facility]();
     var filteredFacilities = [Facility]()
+    var tapGestureRecognizer: UITapGestureRecognizer!
     
+    let townDropDown = DropDown()
+    let serviceDropDown = DropDown()
+
     let locationManager = CLLocationManager()
-    let searchController = UISearchController(searchResultsController:nil)
-    
-    
     var currLocation: CLLocation?
+    
+    var selectedService: String = "All Services"
+    var selectedTown: String = "All Towns"
+    
+    let searchController = UISearchController(searchResultsController:nil)
+    let popupViewController = PopupViewController()
     
     var detailViewController: DetailViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let tdd = UIBarButtonItem(title: "All Towns", style: .plain, target: self, action: #selector(townListTapped))
+        let sdd = UIBarButtonItem(title: "All Services", style: .plain, target: self, action: #selector(serviceListTapped))
+        
+        navigationItem.rightBarButtonItem = sdd
+        navigationItem.leftBarButtonItem = tdd
         
         
+        townDropDown.anchorView = tdd
+        townDropDown.dataSource = ["All Towns", "East Hampton", "Riverhead", "Shelter Island", "Southampton", "Southold"]
+
+        serviceDropDown.anchorView = sdd
+        serviceDropDown.dataSource = ["All Services", "Cultural", "Recreation", "Volunteer", "Religious", "Employment",
+        "Education/Tutoring", "Domestic Violence", "Child Abuse", "Substance Abuse", "Mental Health", "Adolescent Health",
+        "Sports", "Daycare", "Counseling"]
+
+
+        serviceDropDown.selectionAction = { (index: Int, item: String) in
+            sdd.title = item
+            self.selectedService = item
+            self.filterOnSelectionChanged(selectedTown: self.selectedTown, selectedService: self.selectedService)
+        }
+        
+        townDropDown.selectionAction = { (index: Int, item: String) in
+            tdd.title = item
+            self.selectedTown = item
+            self.filterOnSelectionChanged(selectedTown: self.selectedTown, selectedService: self.selectedService)
+        }
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
             
         }
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 90
-        
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // GPS
         locationManager.requestWhenInUseAuthorization()
@@ -64,12 +97,20 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             case let .success(facilities):
                 OperationQueue.main.addOperation {
                     self.facilities = self.getSortedByDistance(facilities)
-                    print ("Successfully found \(facilities.count) Youth Service facilities")
                 }
             case let .failure(error):
                 print ("Error fetching facilities: \(error)")
+                let alertController = UIAlertController(title: "Error fetching facilities: Please check your wireless settings", message: "Click OK to continue", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                    UIAlertAction in
+                    NSLog("OK Pressed")
+                }
+                
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
             }
-            
+
             self.do_table_refresh()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
@@ -77,14 +118,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        
-        searchController.searchBar.scopeButtonTitles = ["All", "East Hampton", "Riverhead", "Shelter Island", "Southampton", "Southold"]
-        searchController.searchBar.delegate = self
-        
-        
+//        tableView.tableHeaderView = searchController.searchBar
+//          tableView.tableHeaderView = UIToolbar
 
-
+//        searchController.searchBar.scopeButtonTitles = ["All", "East Hampton", "Riverhead", "Shelter Island", "Southampton", "Southold"]
+//        searchController.searchBar.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -105,17 +143,20 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
         if segue.identifier == "ShowService"  {
             
+            
             if let row = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row  {
                 let facilityDetail: Facility
                 
-                if searchController.isActive && searchController.searchBar.text != "" {
+                if(selectedTown != "All Towns" || selectedService != "All Services")  {
                     facilityDetail = filteredFacilities[row]
                 } else {
                     facilityDetail = facilities[row]
                 }
                 
-                let detailViewController = segue.destination as! DetailViewController
+                let detailViewController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 detailViewController.facility = facilityDetail
+                detailViewController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                detailViewController.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
@@ -127,6 +168,13 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+
+        if(selectedTown != "All Towns" || selectedService != "All Services")  {
+             return filteredFacilities.count
+        }
+        else {
+        }
         return facilities.count
     }
 
@@ -136,9 +184,8 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         let facility: Facility
         
         cell.updateLabels()
-        var tapGestureRecognizer: UITapGestureRecognizer!
         
-        if searchController.isActive && searchController.searchBar.text != "" {
+        if(selectedTown != "All Towns" || selectedService != "All Services")  {
             facility = filteredFacilities[(indexPath as NSIndexPath).row]
         } else {
             facility = facilities[(indexPath as NSIndexPath).row]
@@ -147,7 +194,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         cell.distanceView?.text = String(format: "%.1f", facility.DistFromCenter!) + " mile(s)"
         cell.titleView?.text = facility.F_Name
         cell.addressView?.text = facility.Address
- 
 
         let browserLaunchImage = cell.launchBrowserIcon
         tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MasterViewController.browserLaunchImageTapped(_:)))
@@ -173,7 +219,22 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         return cell
     }
 
+    
+    func filterOnSelectionChanged(selectedTown: String, selectedService: String) {
+        
+        filteredFacilities = facilities.filter { facility in
+            if (selectedTown.lowercased() == facility.Hamlet!.lowercased() || selectedTown == "All Towns")  {
+                if (facility.Category!.lowercased().contains(selectedService.lowercased()) || selectedService == "All Services") {
+                    return true
+                }
+            }
+            return false
+        }
 
+        tableView.reloadData()
+    }
+    
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
@@ -188,6 +249,34 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         })
     }
     
+    func townListTapped()  {
+        
+        townDropDown.show()
+        
+    }
+    
+    func serviceListTapped()  {
+        serviceDropDown.show()
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        
+        // Get user's current location
+        self.currLocation = CLLocation(latitude: center.latitude, longitude: center.longitude)
+        self.locationManager.stopUpdatingLocation()
+        
+    }
+    
+    
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError)  {
+        print ("Errors:  " + error.localizedDescription)
+    }
+    
+ 
     func getSortedByDistance(_ facilities: [Facility]) -> [Facility] {
         
         
@@ -211,6 +300,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         return facilities.sorted { $0.DistFromCenter < $1.DistFromCenter }
     }
     
+   
     func directionsLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         let touch = sender.location(in: tableView)
         
@@ -235,8 +325,10 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 self.present(alertController, animated: true, completion: nil)
                 
             }
-        }    }
+        }
+    }
     
+  
     func phoneLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var phone: String!
@@ -280,9 +372,9 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         if let indexPath = tableView.indexPathForRow(at: touch) {
             let facility = facilities[(indexPath as NSIndexPath).row]
             if facility.Email! != "" {
-                email = facility.WebLink!
+                email = facility.Email!
                 
-                let url = URL(string: "mailto:\(email)")
+                let url = URL(string: "mailto:\(email!)")
                 UIApplication.shared.openURL(url!)
                 
             } else {
@@ -299,8 +391,8 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 
             }
         }
-        
     }
+
     
     func browserLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
@@ -321,19 +413,16 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }
     }
     
-    
-    
+
     func filteredContentForSearchText(_ searchText: String, scope: String = "All")  {
-        
+
         filteredFacilities = facilities.filter { facility in
             let typeMatch = (scope == "All") || (facility.Hamlet! == scope)
-            print (typeMatch, scope, facility.Hamlet!, searchText.lowercased())
             return typeMatch && facility.Address!.lowercased().contains(searchText.lowercased())
         }
         
         tableView.reloadData()
     }
-    
 }
 
 extension MasterViewController: UISearchResultsUpdating  {
