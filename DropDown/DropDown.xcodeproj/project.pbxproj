@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A76442B1B676C2300BF1A2D /* DropDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A76442A1B676C2300BF1A2D /* DropDownTests.swift */; };
-		0A8518D51D6480190089529A /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8518D41D6480190089529A /* MyCell.swift */; };
-		0A8518D71D6481E30089529A /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8518D61D6481E30089529A /* MyCell.xib */; };
 		0AB5D8881D0EEEFF002D3A17 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D87E1D0EEEFF002D3A17 /* DPDConstants.swift */; };
 		0AB5D8891D0EEEFF002D3A17 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D87F1D0EEEFF002D3A17 /* DPDKeyboardListener.swift */; };
 		0AB5D88A1D0EEEFF002D3A17 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D8801D0EEEFF002D3A17 /* DPDUIView+Extension.swift */; };
@@ -20,10 +17,6 @@
 		0AB5D88F1D0EEEFF002D3A17 /* DropDown.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB5D8871D0EEEFF002D3A17 /* DropDown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AB5D8901D0EEFA8002D3A17 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB5D8711D0EEECD002D3A17 /* DropDown.framework */; };
 		0AB5D8911D0EEFA8002D3A17 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB5D8711D0EEECD002D3A17 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0AB5D8981D0EF15D002D3A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D8951D0EF15D002D3A17 /* AppDelegate.swift */; };
-		0AB5D8991D0EF15D002D3A17 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D8961D0EF15D002D3A17 /* NiceButton.swift */; };
-		0AB5D89A1D0EF15D002D3A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5D8971D0EF15D002D3A17 /* ViewController.swift */; };
-		0AB5D8A11D0EF173002D3A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB5D89F1D0EF173002D3A17 /* Main.storyboard */; };
 		0AC1C33A1B6B884100A8DC0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC1C3391B6B884100A8DC0D /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +54,6 @@
 /* Begin PBXFileReference section */
 		0A76440F1B676C2300BF1A2D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7644241B676C2300BF1A2D /* DropDownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropDownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A7644291B676C2300BF1A2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A76442A1B676C2300BF1A2D /* DropDownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTests.swift; sourceTree = "<group>"; };
-		0A8518D41D6480190089529A /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
-		0A8518D61D6481E30089529A /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
-		0AB5D8521D0EEC2A002D3A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/kevin/Documents/Xcode/DropDown/Info.plist; sourceTree = "<absolute>"; };
 		0AB5D8711D0EEECD002D3A17 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB5D8751D0EEECD002D3A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AB5D87E1D0EEEFF002D3A17 /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
@@ -76,10 +64,6 @@
 		0AB5D8851D0EEEFF002D3A17 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		0AB5D8861D0EEEFF002D3A17 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		0AB5D8871D0EEEFF002D3A17 /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
-		0AB5D8951D0EF15D002D3A17 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AB5D8961D0EF15D002D3A17 /* NiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
-		0AB5D8971D0EF15D002D3A17 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0AB5D8A01D0EF173002D3A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AC1C3391B6B884100A8DC0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Demo/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB5D8721D0EEECD002D3A17 /* DropDown */,
-				0A7644111B676C2300BF1A2D /* Demo */,
 				0AC1C3391B6B884100A8DC0D /* Images.xcassets */,
-				0A7644271B676C2300BF1A2D /* DropDownTests */,
 				0A7644101B676C2300BF1A2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,45 +110,6 @@
 				0AB5D8711D0EEECD002D3A17 /* DropDown.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0A7644111B676C2300BF1A2D /* Demo */ = {
-			isa = PBXGroup;
-			children = (
-				0AB5D8951D0EF15D002D3A17 /* AppDelegate.swift */,
-				0AB5D8971D0EF15D002D3A17 /* ViewController.swift */,
-				0A8518D41D6480190089529A /* MyCell.swift */,
-				0A8518D61D6481E30089529A /* MyCell.xib */,
-				0AB5D89F1D0EF173002D3A17 /* Main.storyboard */,
-				0AB5D8961D0EF15D002D3A17 /* NiceButton.swift */,
-				0A7644121B676C2300BF1A2D /* Supporting Files */,
-			);
-			path = Demo;
-			sourceTree = "<group>";
-		};
-		0A7644121B676C2300BF1A2D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0AB5D8521D0EEC2A002D3A17 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0A7644271B676C2300BF1A2D /* DropDownTests */ = {
-			isa = PBXGroup;
-			children = (
-				0A76442A1B676C2300BF1A2D /* DropDownTests.swift */,
-				0A7644281B676C2300BF1A2D /* Supporting Files */,
-			);
-			path = DropDownTests;
-			sourceTree = "<group>";
-		};
-		0A7644281B676C2300BF1A2D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0A7644291B676C2300BF1A2D /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0AB5D8721D0EEECD002D3A17 /* DropDown */ = {
@@ -329,8 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC1C33A1B6B884100A8DC0D /* Images.xcassets in Resources */,
-				0A8518D71D6481E30089529A /* MyCell.xib in Resources */,
-				0AB5D8A11D0EF173002D3A17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AB5D89A1D0EF15D002D3A17 /* ViewController.swift in Sources */,
-				0A8518D51D6480190089529A /* MyCell.swift in Sources */,
-				0AB5D8991D0EF15D002D3A17 /* NiceButton.swift in Sources */,
-				0AB5D8981D0EF15D002D3A17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A76442B1B676C2300BF1A2D /* DropDownTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,17 +334,6 @@
 			targetProxy = 0AB5D8921D0EEFA8002D3A17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0AB5D89F1D0EF173002D3A17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AB5D8A01D0EF173002D3A17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0A76442C1B676C2300BF1A2D /* Debug */ = {

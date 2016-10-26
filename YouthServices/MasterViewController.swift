@@ -28,6 +28,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     var facilities = [Facility]();
     var filteredFacilities = [Facility]()
     var tapGestureRecognizer: UITapGestureRecognizer!
+    var isFiltered:Bool = true
     
     let townDropDown = DropDown()
     let serviceDropDown = DropDown()
@@ -39,7 +40,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     var selectedTown: String = "All Towns"
     
     let searchController = UISearchController(searchResultsController:nil)
-    let popupViewController = PopupViewController()
+
     
     var detailViewController: DetailViewController? = nil
 
@@ -104,7 +105,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    NSLog("OK Pressed")
+                    //NSLog("OK Pressed")
                 }
                 
                 alertController.addAction(okAction)
@@ -118,11 +119,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-//        tableView.tableHeaderView = searchController.searchBar
-//          tableView.tableHeaderView = UIToolbar
-
-//        searchController.searchBar.scopeButtonTitles = ["All", "East Hampton", "Riverhead", "Shelter Island", "Southampton", "Southold"]
-//        searchController.searchBar.delegate = self
+ 
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -173,8 +170,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         if(selectedTown != "All Towns" || selectedService != "All Services")  {
              return filteredFacilities.count
         }
-        else {
-        }
         return facilities.count
     }
 
@@ -187,8 +182,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         
         if(selectedTown != "All Towns" || selectedService != "All Services")  {
             facility = filteredFacilities[(indexPath as NSIndexPath).row]
-        } else {
+            isFiltered = true
+        }
+        else  {
             facility = facilities[(indexPath as NSIndexPath).row]
+            isFiltered = false
         }
         
         cell.distanceView?.text = String(format: "%.1f", facility.DistFromCenter!) + " mile(s)"
@@ -250,9 +248,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
     func townListTapped()  {
-        
         townDropDown.show()
-        
     }
     
     func serviceListTapped()  {
@@ -302,14 +298,23 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     
    
     func directionsLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
+        
+        var facility: Facility!
+
         let touch = sender.location(in: tableView)
         
         if let indexPath = tableView.indexPathForRow(at: touch) {
-            let facility = facilities[(indexPath as NSIndexPath).row]
+            if(isFiltered)  {
+                facility = filteredFacilities[(indexPath as NSIndexPath).row]
+            } else  {
+                facility = facilities[(indexPath as NSIndexPath).row]
+            }
+
+            let coords = (self.currLocation?.coordinate.latitude.description)! + ","  + (self.currLocation?.coordinate.longitude.description)!
+
             if facility.Lat! != "" && facility.Lon! != ""{
-                
-                
-                let url:URL = URL(string: "https://www.google.com/maps/dir/Current+Location/" + facility.Lat! + "," + facility.Lon!)!
+
+                let url:URL = URL(string: "https://www.google.com/maps/dir/" + coords + "/" + facility.Lat! + "," + facility.Lon!)!
                 UIApplication.shared.openURL(url)
                 
             } else {
@@ -318,7 +323,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    NSLog("OK Pressed")
+                    //NSLog("OK Pressed")
                 }
                 
                 alertController.addAction(okAction)
@@ -332,10 +337,16 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     func phoneLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var phone: String!
+        var facility: Facility!
         
         let touch = sender.location(in: tableView)
         if let indexPath = tableView.indexPathForRow(at: touch) {
-            let facility = facilities[(indexPath as NSIndexPath).row]
+            if(isFiltered) {
+                facility = filteredFacilities[(indexPath as NSIndexPath).row]
+            } else {
+                facility = facilities[(indexPath as NSIndexPath).row]
+            }
+            
             if facility.Telephone! != "" {
                 
                 phone = facility.Telephone!
@@ -353,7 +364,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    NSLog("OK Pressed")
+                    //NSLog("OK Pressed")
                 }
                 
                 alertController.addAction(okAction)
@@ -367,10 +378,16 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     func emailLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var email: String!
+        var facility: Facility!
         
         let touch = sender.location(in: tableView)
         if let indexPath = tableView.indexPathForRow(at: touch) {
-            let facility = facilities[(indexPath as NSIndexPath).row]
+            if(isFiltered) {
+                facility = filteredFacilities[(indexPath as NSIndexPath).row]
+            } else {
+                facility = facilities[(indexPath as NSIndexPath).row]
+            }
+
             if facility.Email! != "" {
                 email = facility.Email!
                 
@@ -383,7 +400,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                     UIAlertAction in
-                    NSLog("OK Pressed")
+                    //NSLog("OK Pressed")
                 }
                 
                 alertController.addAction(okAction)
@@ -397,11 +414,17 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     func browserLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var website: String!
+        var facility: Facility!
         
         let touch = sender.location(in: tableView)
         if let indexPath = tableView.indexPathForRow(at: touch) {
-            let facility = facilities[(indexPath as NSIndexPath).row]
-            if facility.WebLink! != "" {
+            if (isFiltered)  {
+                facility = filteredFacilities[(indexPath as NSIndexPath).row]
+            } else {
+                facility = facilities[(indexPath as NSIndexPath).row]
+            }
+            
+            if facility.WebLink! != ""  {
                 website = facility.WebLink!
             } else {
                 website = "http://www.southamptontownny.gov"
@@ -423,9 +446,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         
         tableView.reloadData()
     }
+    
 }
 
 extension MasterViewController: UISearchResultsUpdating  {
+
     func updateSearchResults(for searchController: UISearchController) {
         
         let searchBar = searchController.searchBar
