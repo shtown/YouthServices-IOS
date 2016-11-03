@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
         
         splitViewController.delegate = self
-//        DropDown.startListeningToKeyboard()
+        DropDown.startListeningToKeyboard()
  
         return true
     }

@@ -87,15 +87,17 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         
         let frame = UIScreen.main.bounds
         segmentedControl.frame = CGRect(x: frame.minX + 10, y: frame.minY + 65, width: 350, height: frame.height*0.05)
-        segmentedControl.layer.cornerRadius = 5.0
+        segmentedControl.layer.cornerRadius = 10.0
         segmentedControl.addTarget(self, action: #selector(DetailViewController.mapType(_:)), for: UIControlEvents.valueChanged)
         segmentedControl.addTarget(self, action: #selector(DetailViewController.segColor(_:)), for: UIControlEvents.valueChanged)
+
         self.view.addSubview(segmentedControl)
     }
-
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //making a button
         let lbutton: UIButton = UIButton()
         lbutton.setImage(UIImage(named: "Contact.png"), for: .normal)
@@ -189,6 +191,10 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         mapView.settings.myLocationButton = true
 
         self.locationManager.stopUpdatingLocation()
+
+//        let last = locations.first
+//        mapView.camera = GMSCameraPosition(target: (last?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
+
     }
 
     

@@ -77,7 +77,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-            
         }
 
         locationManager.delegate = self
@@ -88,43 +87,19 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
         
-        // Start network activity indicator
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        facilityStore.fetchFacilities()  {
-            (facilitiesResult) -> Void in
-            
-            switch facilitiesResult {
-            case let .success(facilities):
-                OperationQueue.main.addOperation {
-                    self.facilities = self.getSortedByDistance(facilities)
-                }
-            case let .failure(error):
-                print ("Error fetching facilities: \(error)")
-                let alertController = UIAlertController(title: "Error fetching facilities: Please check your wireless settings", message: "Click OK to continue", preferredStyle: .alert)
-                
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
-                    UIAlertAction in
-                    //NSLog("OK Pressed")
-                }
-                
-                alertController.addAction(okAction)
-                self.present(alertController, animated: true, completion: nil)
-            }
+        getFacilities()
 
-            self.do_table_refresh()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
- 
     }
 
     override func viewWillAppear(_ animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -213,16 +188,46 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MasterViewController.directionsLaunchImageTapped(_:)))
         directionsLaunchImage?.isUserInteractionEnabled = true
         directionsLaunchImage?.addGestureRecognizer(tapGestureRecognizer)
-  
+        
+
         return cell
     }
-
     
-    func filterOnSelectionChanged(selectedTown: String, selectedService: String) {
+    func getFacilities()  {
+
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
+        facilityStore.fetchFacilities()  {
+            (facilitiesResult) -> Void in
+            
+            switch facilitiesResult {
+            case let .success(facilities):
+                OperationQueue.main.addOperation {
+                    self.facilities = self.getSortedByDistance(facilities)
+                }
+            case let .failure(error):
+                print ("Error fetching facilities: \(error)")
+                let alertController = UIAlertController(title: "Error fetching facilities: Please check your wireless settings", message: "Click OK to continue", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                    UIAlertAction in
+                    //NSLog("OK Pressed")
+                }
+                
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+            self.do_table_refresh()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+    }
+
+    func filterOnSelectionChanged(selectedTown: String, selectedService: String) {
+
         filteredFacilities = facilities.filter { facility in
-            if (selectedTown.lowercased() == facility.Hamlet!.lowercased() || selectedTown == "All Towns")  {
-                if (facility.Category!.lowercased().contains(selectedService.lowercased()) || selectedService == "All Services") {
+            if (selectedService == "All Services" || facility.Category!.lowercased().contains(selectedService.lowercased())) {
+                if (selectedTown == "All Towns" || selectedTown.lowercased() == facility.Hamlet!.lowercased())  {
                     return true
                 }
             }
@@ -264,10 +269,14 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         // Get user's current location
         self.currLocation = CLLocation(latitude: center.latitude, longitude: center.longitude)
         self.locationManager.stopUpdatingLocation()
-        
+
     }
     
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+
+        getFacilities()
+    }
     private func locationManager(manager: CLLocationManager, didFailWithError error: NSError)  {
         print ("Errors:  " + error.localizedDescription)
     }
@@ -441,6 +450,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
         filteredFacilities = facilities.filter { facility in
             let typeMatch = (scope == "All") || (facility.Hamlet! == scope)
+            print (facility.Address!.lowercased() + "=> " + searchText.lowercased())
             return typeMatch && facility.Address!.lowercased().contains(searchText.lowercased())
         }
         
