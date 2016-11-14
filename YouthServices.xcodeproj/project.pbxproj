@@ -37,6 +37,8 @@
 		0CB8D4041D93176D00C86131 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4031D93176D00C86131 /* GoogleMapsBase.framework */; };
 		0CB8D4061D93177000C86131 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4051D93177000C86131 /* GoogleMaps.framework */; };
 		0CB8D4081D93177300C86131 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4071D93177300C86131 /* GoogleMapsCore.framework */; };
+		0CD7EB271DD3707C006A1427 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */; };
+		0CD7EB2B1DD37437006A1427 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */; };
 		0CE1845A1DB5601C007A158C /* HotlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE184591DB5601C007A158C /* HotlineViewController.swift */; };
 		0CE1845C1DBF964C007A158C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE1845B1DBF964C007A158C /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,8 @@
 		0CB8D4031D93176D00C86131 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Base/Frameworks/GoogleMapsBase.framework"; sourceTree = "<group>"; };
 		0CB8D4051D93177000C86131 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Maps/Frameworks/GoogleMaps.framework"; sourceTree = "<group>"; };
 		0CB8D4071D93177300C86131 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Maps/Frameworks/GoogleMapsCore.framework"; sourceTree = "<group>"; };
+		0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		0CE184591DB5601C007A158C /* HotlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotlineViewController.swift; sourceTree = "<group>"; };
 		0CE1845B1DBF964C007A158C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0CE1845D1DBF96B2007A158C /* YouthServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouthServices.entitlements; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				0C63B24D1D8AEFFF00E10B21 /* ServiceCell.swift */,
 				0C8E75501D8AD8BA008AA187 /* Main.storyboard */,
+				0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				0C8E754C1D8AD8BA008AA187 /* MasterViewController.swift */,
 				0C8E754E1D8AD8BA008AA187 /* DetailViewController.swift */,
 				0CE184591DB5601C007A158C /* HotlineViewController.swift */,
+				0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			files = (
 				0C8E75571D8AD8BA008AA187 /* LaunchScreen.storyboard in Resources */,
 				0C63B23E1D8AE15A00E10B21 /* Assets.xcassets in Resources */,
+				0CD7EB271DD3707C006A1427 /* CustomInfoWindow.xib in Resources */,
 				0C8E75521D8AD8BA008AA187 /* Main.storyboard in Resources */,
 				0C4464541D94183300CFC09C /* GoogleMaps.bundle in Resources */,
 			);
@@ -368,6 +375,7 @@
 				0C63B2491D8AEFD500E10B21 /* FacilitiesAPI.swift in Sources */,
 				0C63B24A1D8AEFD500E10B21 /* Facility.swift in Sources */,
 				0CE1845A1DB5601C007A158C /* HotlineViewController.swift in Sources */,
+				0CD7EB2B1DD37437006A1427 /* CustomInfoWindow.swift in Sources */,
 				0C8E754D1D8AD8BA008AA187 /* MasterViewController.swift in Sources */,
 				0C63B24E1D8AEFFF00E10B21 /* ServiceCell.swift in Sources */,
 				0C63B24C1D8AEFD500E10B21 /* FacilityStore.swift in Sources */,

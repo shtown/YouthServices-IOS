@@ -53,7 +53,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         navigationItem.rightBarButtonItem = sdd
         navigationItem.leftBarButtonItem = tdd
         
-        
         townDropDown.anchorView = tdd
         townDropDown.dataSource = ["All Towns", "East Hampton", "Riverhead", "Shelter Island", "Southampton", "Southold"]
 
@@ -61,7 +60,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         serviceDropDown.dataSource = ["All Services", "Cultural", "Recreation", "Volunteer", "Religious", "Employment",
         "Education/Tutoring", "Domestic Violence", "Child Abuse", "Substance Abuse", "Mental Health", "Adolescent Health",
         "Sports", "Daycare", "Counseling"]
-
 
         serviceDropDown.selectionAction = { (index: Int, item: String) in
             sdd.title = item
@@ -74,6 +72,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             self.selectedTown = item
             self.filterOnSelectionChanged(selectedTown: self.selectedTown, selectedService: self.selectedService)
         }
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -290,8 +289,8 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             let lon = object.Lon!
             
             if let x = Double(lon),
-                let y = Double(lat),
-                let origin = self.currLocation
+               let y = Double(lat),
+               let origin = self.currLocation
             {
                 let facLocation = CLLocation(latitude: y, longitude: x)
                 let distanceBetween: CLLocationDistance = facLocation.distance(from: origin)
@@ -450,7 +449,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
         filteredFacilities = facilities.filter { facility in
             let typeMatch = (scope == "All") || (facility.Hamlet! == scope)
-            print (facility.Address!.lowercased() + "=> " + searchText.lowercased())
+//            print (facility.Address!.lowercased() + "=> " + searchText.lowercased())
             return typeMatch && facility.Address!.lowercased().contains(searchText.lowercased())
         }
         

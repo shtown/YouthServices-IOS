@@ -50,8 +50,7 @@ class HotlineViewController: UIViewController {
             }
         }
     }
-    
-    
+
     @IBAction func showSpanishLifelineTel(_ sender: UIButton) {
         
         if let phone = sender.title(for: .normal) {

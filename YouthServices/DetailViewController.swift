@@ -19,6 +19,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     @IBOutlet var descriptionField: UILabel!
     @IBOutlet var websiteField: UILabel!
     @IBOutlet var feeField: UILabel!
+
     
     var locationManager = CLLocationManager()
     var currLocation: CLLocation?
@@ -67,7 +68,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
 
             let camera = GMSCameraPosition.camera(withLatitude: self.lat!, longitude: self.lon!, zoom: 15.0)
             mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-
+            
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: self.lat!, longitude: self.lon!)
             marker.title = facility.F_Name!
@@ -79,7 +80,10 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
             mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         }
 
+          mapView.delegate = self
           self.view = mapView
+        
+        
         //Add a segmented control for selecting the map type.
         let items = ["Normal", "Hybrid"]
         let segmentedControl = UISegmentedControl(items: items)
@@ -93,6 +97,9 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
 
         self.view.addSubview(segmentedControl)
     }
+    
+
+    
     
  
     override func viewDidLoad() {
@@ -245,6 +252,20 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         UIApplication.shared.openURL(url!)
     }
     
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        // 1
+//        let index:Int! = Int(marker.accessibilityLabel!)
+        // 2
+        let customInfoWindow = Bundle.main.loadNibNamed("CustomInfoWindow", owner: self, options: nil)?[0] as! CustomInfoWindow
+        customInfoWindow.facilityName.text = facility.F_Name!
+        customInfoWindow.facilityAddress.text = facility.Address!
+        customInfoWindow.facilityCategory.text = facility.Category!
+        customInfoWindow.facilityFee.text = facility.Fee!
+        customInfoWindow.facilityDescription.text = facility.Desc!
+
+        //        customInfoWindow.completedYearLbl.text = completedYear[index]
+        return customInfoWindow
+    }    
 }
 
 
