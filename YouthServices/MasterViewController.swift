@@ -58,8 +58,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
         serviceDropDown.anchorView = sdd
         serviceDropDown.dataSource = ["All Services", "Cultural", "Recreation", "Volunteer", "Religious", "Employment",
-        "Education/Tutoring", "Domestic Violence", "Child Abuse", "Substance Abuse", "Mental Health", "Adolescent Health",
-        "Sports", "Daycare", "Counseling"]
+        "Education/Tutoring", "Domestic Violence", "Child Abuse", "Substance Abuse", "Mental Health", "Adolescent Health", "Daycare"]
 
         serviceDropDown.selectionAction = { (index: Int, item: String) in
             sdd.title = item
@@ -105,7 +104,6 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 
     // MARK: - Segues
@@ -251,11 +249,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         })
     }
     
-    func townListTapped()  {
+    @objc func townListTapped()  {
         townDropDown.show()
     }
     
-    func serviceListTapped()  {
+    @objc func serviceListTapped()  {
         serviceDropDown.show()
     }
     
@@ -305,7 +303,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
    
-    func directionsLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
+    @objc func directionsLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var facility: Facility!
 
@@ -318,12 +316,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 facility = facilities[(indexPath as NSIndexPath).row]
             }
 
-            let coords = (self.currLocation?.coordinate.latitude.description)! + ","  + (self.currLocation?.coordinate.longitude.description)!
 
             if facility.Lat! != "" && facility.Lon! != ""{
 
-                let url:URL = URL(string: "https://www.google.com/maps/dir/" + coords + "/" + facility.Lat! + "," + facility.Lon!)!
-                UIApplication.shared.openURL(url)
+                let urlString = "http://maps.google.com/?daddr=\(facility.Lat!),\(facility.Lon!)&directionsmode=driving"
+                UIApplication.shared.openURL(URL(string: urlString)!)
                 
             } else {
                 
@@ -342,7 +339,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
   
-    func phoneLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
+    @objc func phoneLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var phone: String!
         var facility: Facility!
@@ -383,7 +380,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
     
-    func emailLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
+    @objc func emailLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var email: String!
         var facility: Facility!
@@ -419,7 +416,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
 
     
-    func browserLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
+    @objc func browserLaunchImageTapped(_ sender: UITapGestureRecognizer)  {
         
         var website: String!
         var facility: Facility!

@@ -27,6 +27,7 @@
 		0C72162A1D9310950049A891 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216291D9310950049A891 /* SystemConfiguration.framework */; };
 		0C72162C1D93109F0049A891 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72162B1D93109F0049A891 /* UIKit.framework */; };
 		0C72163B1D9316230049A891 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72163A1D9316230049A891 /* GoogleMapsBase.framework */; };
+		0C8DE63F1E6608CA009705CE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE63E1E6608CA009705CE /* CalendarViewController.swift */; };
 		0C8E754B1D8AD8BA008AA187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E754A1D8AD8BA008AA187 /* AppDelegate.swift */; };
 		0C8E754D1D8AD8BA008AA187 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E754C1D8AD8BA008AA187 /* MasterViewController.swift */; };
 		0C8E754F1D8AD8BA008AA187 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E754E1D8AD8BA008AA187 /* DetailViewController.swift */; };
@@ -112,6 +113,7 @@
 		0C7216291D9310950049A891 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C72162B1D93109F0049A891 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0C72163A1D9316230049A891 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		0C8DE63E1E6608CA009705CE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.csh; };
 		0C8E75471D8AD8BA008AA187 /* YouthServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouthServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8E754A1D8AD8BA008AA187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C8E754C1D8AD8BA008AA187 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				0C8E754E1D8AD8BA008AA187 /* DetailViewController.swift */,
 				0CE184591DB5601C007A158C /* HotlineViewController.swift */,
 				0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */,
+				0C8DE63E1E6608CA009705CE /* CalendarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,13 +285,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = TOS;
 				TargetAttributes = {
 					0C8E75461D8AD8BA008AA187 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NB6CSU478G;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0920;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
 								enabled = 0;
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8DE63F1E6608CA009705CE /* CalendarViewController.swift in Sources */,
 				0C8E754F1D8AD8BA008AA187 /* DetailViewController.swift in Sources */,
 				0C63B2491D8AEFD500E10B21 /* FacilitiesAPI.swift in Sources */,
 				0C63B24A1D8AEFD500E10B21 /* Facility.swift in Sources */,
@@ -422,14 +426,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -471,14 +481,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -526,7 +542,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouthServices-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -549,7 +566,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gov.southamptontownny.YouthServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouthServices-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

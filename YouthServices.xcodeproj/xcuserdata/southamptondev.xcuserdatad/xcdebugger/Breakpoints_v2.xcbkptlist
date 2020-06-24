@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -95,8 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "DetailViewController"
-            landmarkType = "3">
+            landmarkName = "facility"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
             <Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "getSortedByDistance(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "getSortedByDistance(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
             landmarkName = "browserLaunchImageTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
             landmarkName = "emailLaunchImageTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,11 +407,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
             landmarkName = "updateSearchResults(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -423,11 +423,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -439,11 +439,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -455,7 +455,87 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/MasterViewController.swift"
+            timestampString = "509990714.635786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/DetailViewController.swift"
+            timestampString = "510003161.572767"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "orientationChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/MasterViewController.swift"
+            timestampString = "515363056.550891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "directionsLaunchImageTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/MasterViewController.swift"
+            timestampString = "509990714.635786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "MasterViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/MasterViewController.swift"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -471,75 +551,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "orientationChanged()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
-            landmarkName = "directionsLaunchImageTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
-            landmarkName = "MasterViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -551,11 +567,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -567,27 +583,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
             landmarkName = "emailLaunchImageTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -599,11 +599,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "437"
-            endingLineNumber = "437"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
             landmarkName = "browserLaunchImageTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -615,11 +615,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "509990714.635786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -636,8 +636,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "DetailViewController"
-            landmarkType = "3">
+            landmarkName = "facility"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -679,12 +679,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510001612.879833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "adaptivePresentationStyle(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -727,11 +727,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "locationManager(manager:didChangeAuthorizationStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -743,11 +743,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/DetailViewController.swift"
+            timestampString = "510003161.572767"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "locationManager(manager:didChangeAuthorizationStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -759,11 +775,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "locationManager(manager:didChangeAuthorizationStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -775,27 +791,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "locationManager(manager:didChangeAuthorizationStatus:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "hotlineButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -823,11 +823,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -839,11 +839,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "locationManager(manager:didChangeAuthorizationStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -855,11 +855,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -871,11 +871,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500487097.621616"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
             landmarkName = "locationManager(manager:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -887,11 +887,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/MasterViewController.swift"
-            timestampString = "499960409.072018"
+            timestampString = "515363056.550891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "452"
-            endingLineNumber = "452"
+            startingLineNumber = "450"
+            endingLineNumber = "450"
             landmarkName = "filteredContentForSearchText(_:scope:)"
             landmarkType = "7">
             <Locations>
@@ -951,12 +951,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510001612.879833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "adaptivePresentationStyle(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -967,11 +967,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "mapType(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -983,11 +983,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "segColor(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1015,13 +1015,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500487097.621616"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "DetailViewController"
-            landmarkType = "3">
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1031,11 +1031,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500403601.882184"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "mapView(_:markerInfoWindow:)"
             landmarkType = "7">
             <Locations>
@@ -1079,11 +1079,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouthServices/DetailViewController.swift"
-            timestampString = "500487097.621616"
+            timestampString = "510003161.572767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270">
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "DetailViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1100,6 +1102,64 @@
             endingLineNumber = "12"
             landmarkName = "CustomInfoWindow"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/CalendarViewController.swift"
+            timestampString = "510072936.392928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/CalendarViewController.swift"
+            timestampString = "510072942.697546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/CalendarViewController.swift"
+            timestampString = "510073086.481725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouthServices/MasterViewController.swift"
+            timestampString = "515363056.550891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "directionsLaunchImageTapped(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

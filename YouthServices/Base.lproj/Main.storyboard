@@ -15,7 +15,7 @@
                 <navigationController title="Services" automaticallyAdjustsScrollViewInsets="NO" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="Pmd-2v-anx">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -266,7 +266,141 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGe-4b-wkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.5999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1364" y="130"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="yDC-rt-HRV">
+            <objects>
+                <viewController storyboardIdentifier="calendarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dcX-9H-aed" customClass="CalendarViewController" customModule="YouthServices" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nsD-9u-ynv"/>
+                        <viewControllerLayoutGuide type="bottom" id="P4a-rC-KnW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YZE-OI-ps5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqQ-3f-IrN">
+                                <rect key="frame" x="87" y="13" width="201" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yav-8x-Fni"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.47450980390000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-xl-o8e">
+                                <rect key="frame" x="69" y="63" width="123" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R2i-kQ-SSa">
+                                <rect key="frame" x="135" y="36" width="123" height="308"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ww-XG-3p4">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Sag Harbor Online"/>
+                                        <connections>
+                                            <action selector="showSagOnline:" destination="dcX-9H-aed" eventType="touchUpInside" id="pon-4v-2H4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-jU-xfH">
+                                        <rect key="frame" x="0.0" y="28" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="27 East"/>
+                                        <connections>
+                                            <action selector="show27East:" destination="dcX-9H-aed" eventType="touchUpInside" id="TaE-c7-GfF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKX-i5-TIh">
+                                        <rect key="frame" x="0.0" y="56" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Macaroni Kid"/>
+                                        <connections>
+                                            <action selector="showMacaroniKid:" destination="dcX-9H-aed" eventType="touchUpInside" id="WPN-eb-V8r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-Ih-Kxs">
+                                        <rect key="frame" x="0.0" y="84" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Hamptons.com"/>
+                                        <connections>
+                                            <action selector="showHamptonsCom:" destination="dcX-9H-aed" eventType="touchUpInside" id="YbA-VK-fYq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2x-3J-CJI">
+                                        <rect key="frame" x="0.0" y="112" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Mommy Poppins"/>
+                                        <connections>
+                                            <action selector="showMommyPoppins:" destination="dcX-9H-aed" eventType="touchUpInside" id="Flq-A6-pPx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-bb-SP9">
+                                        <rect key="frame" x="0.0" y="140" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Sag Harbor Kids"/>
+                                        <connections>
+                                            <action selector="showSagHarborKids:" destination="dcX-9H-aed" eventType="touchUpInside" id="cgS-uf-jnw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2p-Q2-nC9">
+                                        <rect key="frame" x="0.0" y="168" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="East End Local"/>
+                                        <connections>
+                                            <action selector="showEastEndLocal:" destination="dcX-9H-aed" eventType="touchUpInside" id="afH-o2-cHT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw5-Vq-xgo">
+                                        <rect key="frame" x="0.0" y="196" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Dan's Papers"/>
+                                        <connections>
+                                            <action selector="showDansPapers:" destination="dcX-9H-aed" eventType="touchUpInside" id="EKY-3h-dEG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X05-7V-uOI">
+                                        <rect key="frame" x="0.0" y="224" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Long Island Browser"/>
+                                        <connections>
+                                            <action selector="showLongIslandBrowser:" destination="dcX-9H-aed" eventType="touchUpInside" id="jpB-83-QRJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0E-bP-9XS">
+                                        <rect key="frame" x="0.0" y="252" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Patch"/>
+                                        <connections>
+                                            <action selector="showPatch:" destination="dcX-9H-aed" eventType="touchUpInside" id="uTC-Ed-CD7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMA-J2-8si">
+                                        <rect key="frame" x="0.0" y="280" width="123" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Newsday"/>
+                                        <connections>
+                                            <action selector="showNewsday:" destination="dcX-9H-aed" eventType="touchUpInside" id="VQN-d0-Wmc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76470588240000004" green="0.87316484900000002" blue="0.72098487469999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LqQ-3f-IrN" firstAttribute="top" secondItem="YZE-OI-ps5" secondAttribute="topMargin" constant="13" id="3ym-CD-2CR"/>
+                            <constraint firstItem="R2i-kQ-SSa" firstAttribute="top" secondItem="LqQ-3f-IrN" secondAttribute="bottom" constant="2" id="AgY-xM-j6e"/>
+                            <constraint firstItem="LqQ-3f-IrN" firstAttribute="leading" secondItem="YZE-OI-ps5" secondAttribute="leadingMargin" constant="71" id="EZG-ZQ-cG9"/>
+                            <constraint firstItem="LqQ-3f-IrN" firstAttribute="centerX" secondItem="YZE-OI-ps5" secondAttribute="centerX" id="Ewv-DP-BEI"/>
+                            <constraint firstItem="R2i-kQ-SSa" firstAttribute="leading" secondItem="YZE-OI-ps5" secondAttribute="leading" constant="135" id="n4t-1n-fUC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdA-zg-1eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.5" y="129.5"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -299,7 +433,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho8-jp-1JL">
-                                            <rect key="frame" x="25" y="8" width="200" height="20.5"/>
+                                            <rect key="frame" x="25" y="8" width="200" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="yZf-5B-sgM"/>
                                             </constraints>
@@ -314,19 +448,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-sa-OdV">
-                                            <rect key="frame" x="539" y="8" width="42" height="20.5"/>
+                                            <rect key="frame" x="539" y="8" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-Uw-Kpn">
-                                            <rect key="frame" x="25" y="28.5" width="240" height="32"/>
+                                            <rect key="frame" x="25" y="29" width="240" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-5c-SCO">
-                                            <rect key="frame" x="25" y="79.5" width="550" height="36"/>
+                                            <rect key="frame" x="25" y="79" width="550" height="36"/>
                                             <subviews>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WebBrowserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ycx-jc-kgB">
                                                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
@@ -336,14 +470,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-LJ-P6F">
-                                                    <rect key="frame" x="171.5" y="0.0" width="36" height="36"/>
+                                                    <rect key="frame" x="171" y="0.0" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="Agw-sz-wxd"/>
                                                         <constraint firstAttribute="width" constant="36" id="GeA-xs-hRm"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wak-dC-LOp">
-                                                    <rect key="frame" x="342.5" y="0.0" width="36" height="36"/>
+                                                    <rect key="frame" x="343" y="0.0" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="uQI-uI-WA2"/>
                                                         <constraint firstAttribute="height" constant="36" id="zTc-18-o5M"/>
@@ -404,7 +538,7 @@
         <scene sceneID="r7l-gg-dq7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="DjV-YW-jjY">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

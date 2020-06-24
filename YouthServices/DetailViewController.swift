@@ -20,7 +20,6 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     @IBOutlet var websiteField: UILabel!
     @IBOutlet var feeField: UILabel!
 
-    
     var locationManager = CLLocationManager()
     var currLocation: CLLocation?
     let regionRadius: CLLocationDistance = 1000
@@ -38,7 +37,6 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
 
                 self.lat = Double(facility.Lat!)
                 self.lon = Double(facility.Lon!)
-
 
             } else {
                 let alertController = UIAlertController(title: "There is bad or non-existent coordinate information for this facility", message: "Click OK to continue", preferredStyle: .alert)
@@ -99,9 +97,6 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     }
     
 
-    
-    
- 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,6 +107,12 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         lbutton.target(forAction: #selector(DetailViewController.showContactEmail), withSender: self)
         lbutton.addTarget(self, action: #selector(DetailViewController.showContactEmail), for: UIControlEvents.touchUpInside)
         
+                //making a button
+        let calbutton: UIButton = UIButton()
+        calbutton.setImage(UIImage(named: "Calendar.png"), for: .normal)
+        calbutton.frame = CGRect(x: -160,y: 0, width: 40, height: 40)
+        calbutton.target(forAction: #selector(DetailViewController.showContactEmail), withSender: self)
+        calbutton.addTarget(self, action: #selector(DetailViewController.calendarButtonTapped), for: UIControlEvents.touchUpInside)
         
         let rbutton: UIButton = UIButton()
         rbutton.setImage(UIImage(named: "Hotline.png"), for: .normal)
@@ -123,10 +124,14 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         let leftItem:UIBarButtonItem = UIBarButtonItem()
         leftItem.customView = lbutton
         
+        //making a UIBarbuttonItem on UINavigationBar
+        let calItem:UIBarButtonItem = UIBarButtonItem()
+        calItem.customView = calbutton
+        
         let rightItem:UIBarButtonItem = UIBarButtonItem()
         rightItem.customView = rbutton
 
-        self.navigationItem.setRightBarButtonItems([leftItem,rightItem], animated:true)
+        self.navigationItem.setRightBarButtonItems([leftItem,rightItem,calItem], animated:true)
         self.navigationItem.setHidesBackButton(false, animated:true)
         
         locationManager.delegate = self
@@ -164,6 +169,23 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         
     }
  
+    @IBAction func calendarButtonTapped(_ sender: AnyObject) {
+        
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "calendarViewController")
+        
+        // set the presentation style
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        popController.preferredContentSize = CGSize(width: 400, height: 350)
+        // set up the popover presentation controller
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = (sender as! UIView)
+        popController.popoverPresentationController?.sourceRect = sender.bounds
+        
+        // present the popover
+        self.present(popController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func hotlineButtonTapped(_ sender: AnyObject) {
         // get a reference to the view controller for the popover
@@ -205,7 +227,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     }
 
     
-    func mapType(_ sender: UISegmentedControl) {
+    @objc func mapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             mapView.mapType = kGMSTypeNormal
@@ -216,7 +238,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         }
     }
     
-    func segColor(_ sender: UISegmentedControl) {
+    @objc func segColor(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             sender.tintColor = UIColor.blue
@@ -246,7 +268,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         
     }
 
-    func showContactEmail(sender:AnyObject)  {
+    @objc func showContactEmail(sender:AnyObject)  {
         
         let url = URL(string: "mailto:southamptonyouthbureau@gmail.com")
         UIApplication.shared.openURL(url!)

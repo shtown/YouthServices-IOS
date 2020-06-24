@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.brown]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.brown]
         
         GMSServices.provideAPIKey("AIzaSyDsKjAOaAUFgLH6d_qFaKYKf1nNkV66exw")
         

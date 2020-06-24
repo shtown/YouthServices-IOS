@@ -30,7 +30,7 @@ class HotlineViewController: UIViewController {
             if let url:URL = URL(string: "tel://" + phone) {
                 UIApplication.shared.openURL(url)
             }
-        }
+        }       
     }
 
     @IBAction func showSpanishHotlineTel(_ sender: UIButton) {

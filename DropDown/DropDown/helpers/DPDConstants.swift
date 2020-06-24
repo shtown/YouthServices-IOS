@@ -39,7 +39,6 @@ internal struct DPDConstant {
 			static let Offset = CGSize.zero
 			static let Opacity: Float = 0.4
 			static let Radius: CGFloat = 8
-
 		}
 
 	}
