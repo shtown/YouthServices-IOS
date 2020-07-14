@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C4464541D94183300CFC09C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C4464531D94183300CFC09C /* GoogleMaps.bundle */; };
-		0C63B23E1D8AE15A00E10B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C63B23D1D8AE15A00E10B21 /* Assets.xcassets */; };
+		0C21078224ABD30E00569831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C21078124ABD30D00569831 /* Assets.xcassets */; };
+		0C4DBB3124ABB5C300D36E4D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4DBB3024ABB5C300D36E4D /* Metal.framework */; };
+		0C4DBB3324ABB60400D36E4D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4DBB3224ABB60400D36E4D /* MetalKit.framework */; };
 		0C63B2491D8AEFD500E10B21 /* FacilitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2451D8AEFD500E10B21 /* FacilitiesAPI.swift */; };
 		0C63B24A1D8AEFD500E10B21 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2461D8AEFD500E10B21 /* Facility.swift */; };
 		0C63B24C1D8AEFD500E10B21 /* FacilityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2481D8AEFD500E10B21 /* FacilityStore.swift */; };
@@ -18,11 +19,9 @@
 		0C7216181D93104D0049A891 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216171D93104D0049A891 /* CoreGraphics.framework */; };
 		0C72161A1D9310550049A891 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216191D9310550049A891 /* CoreLocation.framework */; };
 		0C72161C1D93105E0049A891 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72161B1D93105E0049A891 /* CoreText.framework */; };
-		0C72161E1D9310670049A891 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72161D1D9310670049A891 /* GLKit.framework */; };
 		0C7216201D93106F0049A891 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72161F1D93106F0049A891 /* ImageIO.framework */; };
 		0C7216221D9310770049A891 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216211D9310770049A891 /* libc++.tbd */; };
 		0C7216241D9310800049A891 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216231D9310800049A891 /* libz.tbd */; };
-		0C7216261D9310860049A891 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216251D9310860049A891 /* OpenGLES.framework */; };
 		0C7216281D93108C0049A891 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216271D93108C0049A891 /* QuartzCore.framework */; };
 		0C72162A1D9310950049A891 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216291D9310950049A891 /* SystemConfiguration.framework */; };
 		0C72162C1D93109F0049A891 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72162B1D93109F0049A891 /* UIKit.framework */; };
@@ -33,11 +32,14 @@
 		0C8E754F1D8AD8BA008AA187 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8E754E1D8AD8BA008AA187 /* DetailViewController.swift */; };
 		0C8E75521D8AD8BA008AA187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8E75501D8AD8BA008AA187 /* Main.storyboard */; };
 		0C8E75571D8AD8BA008AA187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8E75551D8AD8BA008AA187 /* LaunchScreen.storyboard */; };
+		0C925A8724BDF5D600FC7196 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C72161D1D9310670049A891 /* GLKit.framework */; };
+		0C925A8824BDF5E700FC7196 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216251D9310860049A891 /* OpenGLES.framework */; };
 		0CA23C161DBFE50B006846F4 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA23C131DBFDF42006846F4 /* DropDown.framework */; };
 		0CA23C191DBFEB29006846F4 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA23C131DBFDF42006846F4 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CB8D4041D93176D00C86131 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4031D93176D00C86131 /* GoogleMapsBase.framework */; };
 		0CB8D4061D93177000C86131 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4051D93177000C86131 /* GoogleMaps.framework */; };
 		0CB8D4081D93177300C86131 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB8D4071D93177300C86131 /* GoogleMapsCore.framework */; };
+		0CD49E2A24BDE04800AEDA7F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CD49E2924BDE04800AEDA7F /* GoogleMaps.bundle */; };
 		0CD7EB271DD3707C006A1427 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */; };
 		0CD7EB2B1DD37437006A1427 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */; };
 		0CE1845A1DB5601C007A158C /* HotlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE184591DB5601C007A158C /* HotlineViewController.swift */; };
@@ -90,10 +92,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C21078124ABD30D00569831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = YouthServices/Assets.xcassets; sourceTree = "<group>"; };
 		0C312BA51DBF9B8700FF4962 /* YouthServices copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YouthServices copy-Info.plist"; path = "/Users/southamptondev/Documents/Development/YouthServices/YouthServices copy-Info.plist"; sourceTree = "<absolute>"; };
 		0C4464501D9416FB00CFC09C /* YouthServices-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouthServices-Bridging-Header.h"; sourceTree = "<group>"; };
-		0C4464531D94183300CFC09C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		0C63B23D1D8AE15A00E10B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../EastEndYouthServices/EastEndYouthServices/Assets.xcassets; sourceTree = "<group>"; };
+		0C4DBB3024ABB5C300D36E4D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		0C4DBB3224ABB60400D36E4D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		0C63B2451D8AEFD500E10B21 /* FacilitiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilitiesAPI.swift; path = ../../EastEndYouthServices/EastEndYouthServices/FacilitiesAPI.swift; sourceTree = "<group>"; };
 		0C63B2461D8AEFD500E10B21 /* Facility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Facility.swift; path = ../../EastEndYouthServices/EastEndYouthServices/Facility.swift; sourceTree = "<group>"; };
 		0C63B2481D8AEFD500E10B21 /* FacilityStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilityStore.swift; path = ../../EastEndYouthServices/EastEndYouthServices/FacilityStore.swift; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		0CB8D4031D93176D00C86131 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Base/Frameworks/GoogleMapsBase.framework"; sourceTree = "<group>"; };
 		0CB8D4051D93177000C86131 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Maps/Frameworks/GoogleMaps.framework"; sourceTree = "<group>"; };
 		0CB8D4071D93177300C86131 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = "../../../Downloads/5a212b0fa429156f-GoogleMaps-2.0.1 5/Subspecs/Maps/Frameworks/GoogleMapsCore.framework"; sourceTree = "<group>"; };
+		0CD49E2924BDE04800AEDA7F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
 		0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		0CE184591DB5601C007A158C /* HotlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotlineViewController.swift; sourceTree = "<group>"; };
@@ -136,24 +140,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4DBB3124ABB5C300D36E4D /* Metal.framework in Frameworks */,
+				0C4DBB3324ABB60400D36E4D /* MetalKit.framework in Frameworks */,
 				0CA23C161DBFE50B006846F4 /* DropDown.framework in Frameworks */,
 				0C72162C1D93109F0049A891 /* UIKit.framework in Frameworks */,
 				0C72162A1D9310950049A891 /* SystemConfiguration.framework in Frameworks */,
 				0C7216281D93108C0049A891 /* QuartzCore.framework in Frameworks */,
-				0C7216261D9310860049A891 /* OpenGLES.framework in Frameworks */,
 				0C7216241D9310800049A891 /* libz.tbd in Frameworks */,
 				0C7216221D9310770049A891 /* libc++.tbd in Frameworks */,
 				0C7216201D93106F0049A891 /* ImageIO.framework in Frameworks */,
-				0C72161E1D9310670049A891 /* GLKit.framework in Frameworks */,
 				0CE1845C1DBF964C007A158C /* MapKit.framework in Frameworks */,
 				0C72161C1D93105E0049A891 /* CoreText.framework in Frameworks */,
 				0CB8D4081D93177300C86131 /* GoogleMapsCore.framework in Frameworks */,
 				0CB8D4061D93177000C86131 /* GoogleMaps.framework in Frameworks */,
 				0C72163B1D9316230049A891 /* GoogleMapsBase.framework in Frameworks */,
+				0C925A8824BDF5E700FC7196 /* OpenGLES.framework in Frameworks */,
 				0C72161A1D9310550049A891 /* CoreLocation.framework in Frameworks */,
 				0CB8D4041D93176D00C86131 /* GoogleMapsBase.framework in Frameworks */,
 				0C7216181D93104D0049A891 /* CoreGraphics.framework in Frameworks */,
 				0C7216161D9310410049A891 /* CoreData.framework in Frameworks */,
+				0C925A8724BDF5D600FC7196 /* GLKit.framework in Frameworks */,
 				0C7216141D9310350049A891 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +192,8 @@
 		0C7216041D930D080049A891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C4DBB3224ABB60400D36E4D /* MetalKit.framework */,
+				0C4DBB3024ABB5C300D36E4D /* Metal.framework */,
 				0CE1845B1DBF964C007A158C /* MapKit.framework */,
 				0CB8D4071D93177300C86131 /* GoogleMapsCore.framework */,
 				0CB8D4051D93177000C86131 /* GoogleMaps.framework */,
@@ -210,9 +218,9 @@
 		0C8E753E1D8AD8BA008AA187 = {
 			isa = PBXGroup;
 			children = (
+				0CD49E2924BDE04800AEDA7F /* GoogleMaps.bundle */,
+				0C21078124ABD30D00569831 /* Assets.xcassets */,
 				0CA23C081DBFDF42006846F4 /* DropDown.xcodeproj */,
-				0C4464531D94183300CFC09C /* GoogleMaps.bundle */,
-				0C63B23D1D8AE15A00E10B21 /* Assets.xcassets */,
 				0C8E75491D8AD8BA008AA187 /* YouthServices */,
 				0C8E75481D8AD8BA008AA187 /* Products */,
 				0C72163A1D9316230049A891 /* GoogleMapsBase.framework */,
@@ -285,13 +293,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = TOS;
 				TargetAttributes = {
 					0C8E75461D8AD8BA008AA187 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NB6CSU478G;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1150;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
 								enabled = 0;
@@ -308,7 +316,7 @@
 			};
 			buildConfigurationList = 0C8E75421D8AD8BA008AA187 /* Build configuration list for PBXProject "YouthServices" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -360,10 +368,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8E75571D8AD8BA008AA187 /* LaunchScreen.storyboard in Resources */,
-				0C63B23E1D8AE15A00E10B21 /* Assets.xcassets in Resources */,
 				0CD7EB271DD3707C006A1427 /* CustomInfoWindow.xib in Resources */,
 				0C8E75521D8AD8BA008AA187 /* Main.storyboard in Resources */,
-				0C4464541D94183300CFC09C /* GoogleMaps.bundle in Resources */,
+				0C21078224ABD30E00569831 /* Assets.xcassets in Resources */,
+				0CD49E2A24BDE04800AEDA7F /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -430,12 +439,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -462,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -476,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -485,12 +497,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -511,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -536,14 +550,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouthServices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov.southamptontownny.YouthServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouthServices-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -561,13 +575,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouthServices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov.southamptontownny.YouthServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouthServices-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

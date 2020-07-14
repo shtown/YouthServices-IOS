@@ -19,7 +19,7 @@ class HotlineViewController: UIViewController {
         
         if let website = sender.title(for: .normal) {
             if let url:URL = URL(string: "http://" + website) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }
@@ -28,7 +28,7 @@ class HotlineViewController: UIViewController {
         
          if let phone = sender.title(for: .normal) {
             if let url:URL = URL(string: "tel://" + phone) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }       
     }
@@ -37,7 +37,7 @@ class HotlineViewController: UIViewController {
         
         if let phone = sender.title(for: .normal) {
             if let url:URL = URL(string: "tel://" + phone) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }
@@ -46,7 +46,7 @@ class HotlineViewController: UIViewController {
         
         if sender.title(for: .normal) != nil {
             if let url:URL = URL(string: "tel://800-273-8255") {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }
@@ -55,7 +55,7 @@ class HotlineViewController: UIViewController {
         
         if let phone = sender.title(for: .normal) {
             if let url:URL = URL(string: "tel://" + phone) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }
@@ -64,7 +64,7 @@ class HotlineViewController: UIViewController {
         
         if let phone = sender.title(for: .normal) {
             if let url = URL(string: "tel://" + phone) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }
@@ -73,7 +73,7 @@ class HotlineViewController: UIViewController {
         
         if let phone = sender.title(for: .normal) {
             if let url = URL(string: "tel://" + phone) {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
         }
     }

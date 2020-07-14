@@ -41,7 +41,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
             } else {
                 let alertController = UIAlertController(title: "There is bad or non-existent coordinate information for this facility", message: "Click OK to continue", preferredStyle: .alert)
                 
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                     UIAlertAction in
                     //NSLog("OK Pressed")
                 }
@@ -54,7 +54,10 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     }
    
     private func presentViewController(alert: UIAlertController, animated flag: Bool, completion: (() -> Void)?) -> Void {
-        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: flag, completion: completion)
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        window?.rootViewController?.present(alert, animated: flag, completion: completion)
+        //UIApplication.shared.windows.filter {$0.isKeyWindow}.first.rootViewController?.present(alert, animated: flag, completion: completion)
+        //UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: flag, completion: completion)
     }
     
 
@@ -90,8 +93,8 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         let frame = UIScreen.main.bounds
         segmentedControl.frame = CGRect(x: frame.minX + 10, y: frame.minY + 65, width: 350, height: frame.height*0.05)
         segmentedControl.layer.cornerRadius = 10.0
-        segmentedControl.addTarget(self, action: #selector(DetailViewController.mapType(_:)), for: UIControlEvents.valueChanged)
-        segmentedControl.addTarget(self, action: #selector(DetailViewController.segColor(_:)), for: UIControlEvents.valueChanged)
+        segmentedControl.addTarget(self, action: #selector(DetailViewController.mapType(_:)), for: UIControl.Event.valueChanged)
+        segmentedControl.addTarget(self, action: #selector(DetailViewController.segColor(_:)), for: UIControl.Event.valueChanged)
 
         self.view.addSubview(segmentedControl)
     }
@@ -105,20 +108,20 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
         lbutton.setImage(UIImage(named: "Contact.png"), for: .normal)
         lbutton.frame = CGRect(x: 0,y: 0, width: 35, height: 35)
         lbutton.target(forAction: #selector(DetailViewController.showContactEmail), withSender: self)
-        lbutton.addTarget(self, action: #selector(DetailViewController.showContactEmail), for: UIControlEvents.touchUpInside)
+        lbutton.addTarget(self, action: #selector(DetailViewController.showContactEmail), for: UIControl.Event.touchUpInside)
         
                 //making a button
         let calbutton: UIButton = UIButton()
         calbutton.setImage(UIImage(named: "Calendar.png"), for: .normal)
         calbutton.frame = CGRect(x: -160,y: 0, width: 40, height: 40)
         calbutton.target(forAction: #selector(DetailViewController.showContactEmail), withSender: self)
-        calbutton.addTarget(self, action: #selector(DetailViewController.calendarButtonTapped), for: UIControlEvents.touchUpInside)
+        calbutton.addTarget(self, action: #selector(DetailViewController.calendarButtonTapped), for: UIControl.Event.touchUpInside)
         
         let rbutton: UIButton = UIButton()
         rbutton.setImage(UIImage(named: "Hotline.png"), for: .normal)
         rbutton.frame = CGRect(x: -80,y: 0, width: 40, height: 40)
         rbutton.target(forAction: #selector(DetailViewController.hotlineButtonTapped), withSender: self)
-        rbutton.addTarget(self, action: #selector(DetailViewController.hotlineButtonTapped), for: UIControlEvents.touchUpInside)
+        rbutton.addTarget(self, action: #selector(DetailViewController.hotlineButtonTapped), for: UIControl.Event.touchUpInside)
         
         //making a UIBarbuttonItem on UINavigationBar
         let leftItem:UIBarButtonItem = UIBarButtonItem()
@@ -258,11 +261,11 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     
     func orientationChanged()
     {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)){
+        if(UIDevice.current.orientation.isLandscape){
             
         }
         
-        if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)){
+        if(UIDevice.current.orientation.isPortrait){
 
         }
         
@@ -271,7 +274,7 @@ class DetailViewController: UIViewController, GMSMapViewDelegate, UIPopoverPrese
     @objc func showContactEmail(sender:AnyObject)  {
         
         let url = URL(string: "mailto:southamptonyouthbureau@gmail.com")
-        UIApplication.shared.openURL(url!)
+        UIApplication.shared.open(url!)
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {

@@ -82,7 +82,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
         
         getFacilities()
@@ -192,7 +192,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     
     func getFacilities()  {
 
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        //UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         facilityStore.fetchFacilities()  {
             (facilitiesResult) -> Void in
@@ -206,7 +206,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 print ("Error fetching facilities: \(error)")
                 let alertController = UIAlertController(title: "Error fetching facilities: Please check your wireless settings", message: "Click OK to continue", preferredStyle: .alert)
                 
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                     UIAlertAction in
                     //NSLog("OK Pressed")
                 }
@@ -216,7 +216,8 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             }
             
             self.do_table_refresh()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            //UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
 
@@ -320,13 +321,13 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             if facility.Lat! != "" && facility.Lon! != ""{
 
                 let urlString = "http://maps.google.com/?daddr=\(facility.Lat!),\(facility.Lon!)&directionsmode=driving"
-                UIApplication.shared.openURL(URL(string: urlString)!)
+                UIApplication.shared.open(URL(string: urlString)!)
                 
             } else {
                 
                 let alertController = UIAlertController(title: "Coordinates Not Supplied", message: "Click OK to continue", preferredStyle: .alert)
                 
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                     UIAlertAction in
                     //NSLog("OK Pressed")
                 }
@@ -361,13 +362,13 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 phone = phone.replacingOccurrences(of: "-" , with: "")
                 
                 let url:URL = URL(string: "tel://" + phone)!
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
                 
             } else {
                 
                 let alertController = UIAlertController(title: "Phone Number Not Supplied", message: "Click OK to continue", preferredStyle: .alert)
                 
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                     UIAlertAction in
                     //NSLog("OK Pressed")
                 }
@@ -397,13 +398,13 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
                 email = facility.Email!
                 
                 let url = URL(string: "mailto:\(email!)")
-                UIApplication.shared.openURL(url!)
+                UIApplication.shared.open(url!)
                 
             } else {
                 
                 let alertController = UIAlertController(title: "Email Address Not Supplied", message: "Click OK to continue", preferredStyle: .alert)
                 
-                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                     UIAlertAction in
                     //NSLog("OK Pressed")
                 }
@@ -437,7 +438,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }
         
         if let url = URL(string: website) {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
     }
     

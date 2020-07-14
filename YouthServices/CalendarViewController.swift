@@ -19,7 +19,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showSagOnline(_ sender: UIButton) {
 
        if let url:URL = URL(string: "http://sagharboronline.com/hamptons-events") {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
         }
        
     }
@@ -27,7 +27,7 @@ class CalendarViewController: UIViewController {
     @IBAction func show27East(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://www.27east.com/hamptons-events-calendar/") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -35,7 +35,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showMacaroniKid(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://hamptons.macaronikid.com/calendar/") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -43,7 +43,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showHamptonsCom(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://www.hamptons.com/calendar") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -51,7 +51,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showMommyPoppins(_ sender: UIButton) {
         
         if let url:URL = URL(string: "https://mommypoppins.com/events?area%5B%5D=116") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -59,7 +59,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showSagHarborKids(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://www.sagharborkids.org") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -68,7 +68,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showEastEndLocal(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://eastendlocal.com/events/") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -76,7 +76,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showDansPapers(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://events.danspapers.com/events/") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -84,7 +84,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showLongIslandBrowser(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://www.longislandbrowser.com/community/events/") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -92,7 +92,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showPatch(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://patch.com/new-york/westhampton-hamptonbays/calendar") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
@@ -100,7 +100,7 @@ class CalendarViewController: UIViewController {
     @IBAction func showNewsday(_ sender: UIButton) {
         
         if let url:URL = URL(string: "http://www.newsday.com/entertainment/long-island-events") {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url)
         }
         
     }
