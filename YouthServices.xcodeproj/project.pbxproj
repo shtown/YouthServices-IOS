@@ -10,10 +10,6 @@
 		0C21078224ABD30E00569831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C21078124ABD30D00569831 /* Assets.xcassets */; };
 		0C4DBB3124ABB5C300D36E4D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4DBB3024ABB5C300D36E4D /* Metal.framework */; };
 		0C4DBB3324ABB60400D36E4D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4DBB3224ABB60400D36E4D /* MetalKit.framework */; };
-		0C63B2491D8AEFD500E10B21 /* FacilitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2451D8AEFD500E10B21 /* FacilitiesAPI.swift */; };
-		0C63B24A1D8AEFD500E10B21 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2461D8AEFD500E10B21 /* Facility.swift */; };
-		0C63B24C1D8AEFD500E10B21 /* FacilityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B2481D8AEFD500E10B21 /* FacilityStore.swift */; };
-		0C63B24E1D8AEFFF00E10B21 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63B24D1D8AEFFF00E10B21 /* ServiceCell.swift */; };
 		0C7216141D9310350049A891 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216131D9310350049A891 /* Accelerate.framework */; };
 		0C7216161D9310410049A891 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216151D9310410049A891 /* CoreData.framework */; };
 		0C7216181D93104D0049A891 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7216171D93104D0049A891 /* CoreGraphics.framework */; };
@@ -44,6 +40,10 @@
 		0CD7EB2B1DD37437006A1427 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7EB2A1DD37437006A1427 /* CustomInfoWindow.swift */; };
 		0CE1845A1DB5601C007A158C /* HotlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE184591DB5601C007A158C /* HotlineViewController.swift */; };
 		0CE1845C1DBF964C007A158C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE1845B1DBF964C007A158C /* MapKit.framework */; };
+		0CF9B4FC24BE4908006AF425 /* FacilitiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9B4FB24BE4908006AF425 /* FacilitiesAPI.swift */; };
+		0CF9B4FE24BE492C006AF425 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9B4FD24BE492B006AF425 /* Facility.swift */; };
+		0CF9B50024BE494B006AF425 /* FacilityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9B4FF24BE494B006AF425 /* FacilityStore.swift */; };
+		0CF9B50224BE49C3006AF425 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9B50124BE49C3006AF425 /* ServiceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +97,6 @@
 		0C4464501D9416FB00CFC09C /* YouthServices-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouthServices-Bridging-Header.h"; sourceTree = "<group>"; };
 		0C4DBB3024ABB5C300D36E4D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		0C4DBB3224ABB60400D36E4D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		0C63B2451D8AEFD500E10B21 /* FacilitiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilitiesAPI.swift; path = ../../EastEndYouthServices/EastEndYouthServices/FacilitiesAPI.swift; sourceTree = "<group>"; };
-		0C63B2461D8AEFD500E10B21 /* Facility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Facility.swift; path = ../../EastEndYouthServices/EastEndYouthServices/Facility.swift; sourceTree = "<group>"; };
-		0C63B2481D8AEFD500E10B21 /* FacilityStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilityStore.swift; path = ../../EastEndYouthServices/EastEndYouthServices/FacilityStore.swift; sourceTree = "<group>"; };
-		0C63B24D1D8AEFFF00E10B21 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = ../../EastEndYouthServices/EastEndYouthServices/ServiceCell.swift; sourceTree = "<group>"; };
 		0C7216021D92C5340049A891 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7216131D9310350049A891 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0C7216151D9310410049A891 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -133,6 +129,10 @@
 		0CE184591DB5601C007A158C /* HotlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotlineViewController.swift; sourceTree = "<group>"; };
 		0CE1845B1DBF964C007A158C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0CE1845D1DBF96B2007A158C /* YouthServices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouthServices.entitlements; sourceTree = "<group>"; };
+		0CF9B4FB24BE4908006AF425 /* FacilitiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilitiesAPI.swift; sourceTree = "<group>"; };
+		0CF9B4FD24BE492B006AF425 /* Facility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		0CF9B4FF24BE494B006AF425 /* FacilityStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilityStore.swift; sourceTree = "<group>"; };
+		0CF9B50124BE49C3006AF425 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 		0C63B2411D8AE27600E10B21 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C63B24D1D8AEFFF00E10B21 /* ServiceCell.swift */,
+				0CF9B50124BE49C3006AF425 /* ServiceCell.swift */,
 				0C8E75501D8AD8BA008AA187 /* Main.storyboard */,
 				0CD7EB261DD3707C006A1427 /* CustomInfoWindow.xib */,
 			);
@@ -241,11 +241,11 @@
 		0C8E75491D8AD8BA008AA187 /* YouthServices */ = {
 			isa = PBXGroup;
 			children = (
+				0CF9B4FF24BE494B006AF425 /* FacilityStore.swift */,
+				0CF9B4FD24BE492B006AF425 /* Facility.swift */,
+				0CF9B4FB24BE4908006AF425 /* FacilitiesAPI.swift */,
 				0CE1845D1DBF96B2007A158C /* YouthServices.entitlements */,
 				0C7216021D92C5340049A891 /* Info.plist */,
-				0C63B2451D8AEFD500E10B21 /* FacilitiesAPI.swift */,
-				0C63B2461D8AEFD500E10B21 /* Facility.swift */,
-				0C63B2481D8AEFD500E10B21 /* FacilityStore.swift */,
 				0C63B2421D8AE28D00E10B21 /* Controllers */,
 				0C8E75551D8AD8BA008AA187 /* LaunchScreen.storyboard */,
 				0C63B2411D8AE27600E10B21 /* Views */,
@@ -384,13 +384,13 @@
 			files = (
 				0C8DE63F1E6608CA009705CE /* CalendarViewController.swift in Sources */,
 				0C8E754F1D8AD8BA008AA187 /* DetailViewController.swift in Sources */,
-				0C63B2491D8AEFD500E10B21 /* FacilitiesAPI.swift in Sources */,
-				0C63B24A1D8AEFD500E10B21 /* Facility.swift in Sources */,
+				0CF9B4FE24BE492C006AF425 /* Facility.swift in Sources */,
 				0CE1845A1DB5601C007A158C /* HotlineViewController.swift in Sources */,
 				0CD7EB2B1DD37437006A1427 /* CustomInfoWindow.swift in Sources */,
+				0CF9B4FC24BE4908006AF425 /* FacilitiesAPI.swift in Sources */,
 				0C8E754D1D8AD8BA008AA187 /* MasterViewController.swift in Sources */,
-				0C63B24E1D8AEFFF00E10B21 /* ServiceCell.swift in Sources */,
-				0C63B24C1D8AEFD500E10B21 /* FacilityStore.swift in Sources */,
+				0CF9B50224BE49C3006AF425 /* ServiceCell.swift in Sources */,
+				0CF9B50024BE494B006AF425 /* FacilityStore.swift in Sources */,
 				0C8E754B1D8AD8BA008AA187 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
